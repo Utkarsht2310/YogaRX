@@ -1,0 +1,42 @@
+{% extends "app/home.html" %}
+{% load static %}
+{% block title %}search{% endblock title%}
+
+{% block main-content %}
+<style>
+    .search-body{
+        /* background-image: url('{% static "images/searchbg5.jpg" %}'); */
+        background-color:white;
+    }
+</style>
+
+<div class="search-body">
+<center>
+    
+    {% if searched %}
+        
+        <br>
+        {% for yoga in yogas %}
+        <h1 id="do-name">  Yoga For {{ searched }} </h1>
+            <div class="yoga-container">
+                
+                 <img src="{{ yoga.gif.url }}" alt="{{ yoga.name }} Yoga" class="yoga-image">
+                
+                <div class="yoga-info">
+                    <h2 class="yoga-name">{{ yoga.name }}</h2>
+                    <p class="yoga-description">{{ yoga.description }}</p>
+                </div>
+            </div>
+            
+            <div class="yoga-benefit">
+                <h3> Benefits: </h3>
+                <p id="benifit">{{ yoga.benifit }}</p>
+            </div>
+            <br> 
+        {% endfor %}
+    {% else %}
+        <h1 id="forgot">You forgot to search</h1>
+    {% endif %}
+</center>
+</div>
+{% endblock main-content %}

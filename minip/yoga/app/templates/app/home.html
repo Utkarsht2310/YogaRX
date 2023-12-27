@@ -1,0 +1,72 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title%}
+
+
+{% block main-content %}
+
+<link rel ="stylesheet" href="{% static 'css/style.css' %}" />
+<style>
+  .about-section-home{
+    background-image: url('{% static "images/bghome3.jpg" %}');
+  }
+</style>
+
+<div class="about-section-home" >
+    <h1 id="welcome">WELCOME</h1>
+    <p style="font-family: Arial, Helvetica, sans-serif;" id="welcome-about">
+       <b> Welcome to our Yoga Recommendation System, where the journey to holistic well-being begins. We understand that finding the perfect yoga practice can be a transformative and personal experience. That's why we've created a platform that goes beyond conventional suggestions, tailoring yoga recommendations to your unique needs and aspirations.</b></p>
+
+        <div class="search-bar">
+          <form class="form-inline" method="post" action="{% url 'search' %}">
+            {% csrf_token %}
+            <input class="form-control2 mr-sm-2" type="search" placeholder="What are you looking for?" aria-label="Search" name="searched">
+            <button class="btn2 btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>  
+    
+</div>
+  <div class="service">
+    <p style="font-size: xx-large;" id="ser1">Our services</p>
+  </div>
+  <div class="container-home">
+    <div class="content">
+      <img src="{% static 'images/home5.jpg' %}"  alt="Image 1">
+      <p  class="services"> We provide yoga on the basis of your need and your problem with full description which help you to perform the yoga very easily.
+        We also attach picture of that Yoga which provides accurate postion and pose.
+      </p>
+    </div>
+  
+    <div class="content">
+      
+      <img src="{% static 'images/bot.jpg' %}"  alt="Image 2">
+      <p class="services"> Soon we will add an AI bot to help you in more better way.
+      </p>
+    </div>
+  
+    <div class="content">
+      <img src="{% static 'images/home2.jpg' %}"  alt="Image 3">
+      <p class="services">  We also provide another search section where you can search and know the soluton for any type of your health related problems</p>
+          
+    </div>
+  </div>
+    
+
+ 
+</div>
+<div class="about-bottom">
+  <h2>About Us</h2>
+        Our team is a blend of passionate yogis, tech enthusiasts, and wellness experts, united by the common goal of making yoga accessible and enjoyable for everyone. We strive to create an inclusive space where beginners feel welcomed, and seasoned practitioners find new dimensions to explore.
+    <h2>Contact Info: </h2>    
+     <b>Email: </b>utkarshtripathi891@gmail.com
+     <br>
+     <b>Phone No.:</b> 9989898989
+     
+    
+</div>
+
+
+  
+
+
+{% endblock main-content %}

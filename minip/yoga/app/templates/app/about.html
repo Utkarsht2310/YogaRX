@@ -1,0 +1,133 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}About{% endblock title%}
+
+
+{% block main-content %}
+<style>
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+  
+  
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+
+<div class="about-section">
+    <h1>About Us </h1>
+    <p>
+
+        Our story starts with a deep appreciation for the profound impact that yoga can have on the mind, body, and spirit. In a world filled with diverse yoga styles and practices, it can be overwhelming to navigate the vast sea of options. That's where we come in.
+        
+        At the heart of our recommendation system is a commitment to understanding you. We believe that yoga is not a one-size-fits-all practice, and your journey should reflect your individuality. By combining advanced technology with a touch of mindfulness, we analyze your preferences, goals, and even your current energy levels to curate personalized yoga recommendations.
+        
+        Our team is a blend of passionate yogis, tech enthusiasts, and wellness experts, united by the common goal of making yoga accessible and enjoyable for everyone. We strive to create an inclusive space where beginners feel welcomed, and seasoned practitioners find new dimensions to explore.</p>
+    
+  </div>
+  
+  <h2 style="text-align:center">Our Aim</h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="{% static 'images/firstaim.jpg' %}" alt="" style="width:100%">
+        <div class="container">
+          <h2> Personalized Wellness</h2>
+          
+          <p> Our primary goal is to empower you on your unique wellness journey. We understand that each individual is distinct, and so are their wellness needs. Through cutting-edge technology and a deep understanding of yogic principles, we aim to provide you with personalized yoga recommendations that resonate with your body, mind, and soul.</p>
+          
+         
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="{% static 'images/secondaim.jpg' %}" alt="" style="width:100%">
+        <div class="container">
+          <h2>Accessibility for All</h2>
+          
+          <p>  Yoga is for everyone, regardless of age, fitness level, or experience. Our aim is to make the benefits of yoga accessible to all, breaking down barriers that may have hindered your path to well-being. Whether you're a seasoned yogi or stepping onto the mat for the first time, we're here to support and inspire you.</p>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="{% static 'images/sixaim.jpg' %}" alt="" style="width:100%">
+        <div class="container">
+          <h2>Mindful Guidance</h2>
+        
+          <p> Wellness is not just about physical health; it's a holistic journey that encompasses mental and emotional balance. Our aim is to guide you mindfully, fostering a deeper connection with yourself and the world around you. Each recommendation is crafted with care, encouraging mindfulness in every breath, stretch, and moment of stillness.
+        </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock main-content %}

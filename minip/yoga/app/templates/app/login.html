@@ -1,0 +1,25 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Login{% endblock title%}
+
+
+{% block main-content %}
+
+<div class="main-login">
+    <h2>Login</h2>
+    <hr>
+
+    <form action="{% url 'home' %}" method="post">
+        {% csrf_token %}
+        {% for fm in form %}
+           {{fm.lable_tag}} {{fm}}
+        {% endfor %}
+        
+        <small><a href="#">Forgot Password ?</a></small>
+        <br>
+        <button type="submit">Submit</button>
+        <small>New User?<a href="{% url 'registraion' %}">Create Account</a></small>
+    </form>
+</div>
+
+{%  endblock main-content%}

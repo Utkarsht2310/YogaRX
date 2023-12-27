@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document | {% block title %}{% endblock title %}</title>
+    {% load static %}
+    
+</head>
+<link rel ="stylesheet" href="{% static 'css/style.css' %}" />
+
+
+<body>
+    
+    <nav>
+        <div class="navbar">
+          <div class="logo"><a href="{% url 'home' %}">YogaHub</a></div>
+          <ul class="menu">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="#">AI</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'registraion' %}">Register</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+
+    <br>
+    <br>
+
+    {% block home-content %}{% endblock home-content %}
+
+    {% block main-content %}{% endblock main-content %}
+    <div class="foot">
+    <b> Copyright : 2023 || Develope by : UTKARSH TRIPATHI </b>
+    </div>
+  
+
+</body>
+</html>
